@@ -1,0 +1,42 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
+* {
+    font-family: 'Menlo', sans-serif;
+}
+
+body {
+    background-color: #f1f1f1;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#response-field{
+    background: transparent;
+    border-radius: 5px;
+    margin: 1rem 0 0 0;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+textarea, input {
+    background-color: white !important;
+    color: black !important;
+}
+
+.paragraph {
+    font-size: 13px;
+    margin-top: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 13px;
+}

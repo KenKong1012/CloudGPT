@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>CloudGPT</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+        <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet" />
+        <!-- and it's easy to individually load additional languages -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    </head>
+    <body>
+        <div class="container" style='margin: 10px; padding: 10px; width: 100%;'>
+            <div class="tabs" style='background-color: white; margin-bottom: 0;'>
+              <ul class="selection">
+                <li class="is-active" data-type='1'><a>Normal Questions</a></li>
+                <li data-type='4'><a>OCR Images</a></li>
+                <li data-type='5'><a>Replace Line</a></li>
+              </ul>
+            </div>
+
+            <div class="fixed-grid has-2-cols-desktop" style='background-color: white;margin-bottom: 0;'>
+                <div class="grid">
+                    <div class="cell question-cell" style='padding: 10px;'>
+                        <div class="field" style='display: flex; align-items: center; height: 100%;'>
+                            <textarea
+                                class="textarea"
+                                placeholder="Enter your question..."
+                                name="question"
+                                style='height: 100%;'
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="cell" style='padding: 10px;'>
+                        <div
+                            class="field"
+                            id="response-field"
+                            style="padding: 1rem"
+                            name="response"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="field" style='background-color: white; padding: 10px;'>
+                <button class="button is-primary submit-button">Ask</button>
+                <button class="button is-danger clear-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <script>
+            hljs.highlightAll();
+        </script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>
