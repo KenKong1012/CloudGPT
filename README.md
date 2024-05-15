@@ -4,7 +4,7 @@
 
 This project is a web application that integrates GPT-3.5 turbo to help people who are annoyed from the advertising of using some free GPT app. Guys can get the openai gpt-3.5-turbo api key and use this simple web app to talk with ChatGPT.
 
-# Featute
+# Features
 1. OCR feature will added soon
 2. Replace Line mean replacing not consecutive line break symbol.
 
